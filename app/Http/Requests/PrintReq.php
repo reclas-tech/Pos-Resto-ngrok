@@ -24,10 +24,17 @@ class PrintReq extends FormRequest
     public function rules(): array
     {
         return [
-            'data.*.kitchen' => 'required|string',
-            'data.*.file' => 'required|string',
+            'data.*.products.*.quantity' => 'required|numeric',
+            'data.*.products.*.name' => 'required|string',
+            'data.*.products.*.note' => 'nullable',
+            'data.*.products' => 'required|array',
+            'data.*.customer' => 'required|string',
+            'data.*.code' => 'required|string',
+            'data.*.date' => 'required|string',
+            'data.*.name' => 'required|string',
             'data.*.cut' => 'required|boolean',
             'data.*.ip' => 'required|string',
+            'data.*.tables' => 'nullable|array',
             'data' => 'required|array',
         ];
     }
@@ -35,11 +42,11 @@ class PrintReq extends FormRequest
     public function messages()
     {
         return [
-            'data.*.kitchen.required' => 'Dapur tidak boleh kosong.',
+            'data.*.name.required' => 'Dapur tidak boleh kosong.',
             'data.*.file.required' => 'File tidak boleh kosong.',
             'data.*.cut.required' => 'Potongan tidak boleh kosong.',
             'data.*.ip.required' => 'IP tidak boleh kosong.',
-            'data.*.kitchen.string' => 'Dapur harus berupa string.',
+            'data.*.name.string' => 'Dapur harus berupa string.',
             'data.*.file.string' => 'File harus berupa string.',
             'data.*.cut.boolean' => 'Potongan harus boolean.',
             'data.*.ip.string' => 'IP harus berupa string.',
