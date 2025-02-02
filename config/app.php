@@ -123,6 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'token' => 'Bearer reclas-madewithlovebyreclas-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWRld2l0aGxvdmVieXJlY2xhcyIsImlhdCI6MTUxNjIzOTAyMn0.SZ_8-5ABbYj0-Q-IpLGn-YEnwBdcbF_BcZN10BE4ATo',
+    'token' => 'reclas-madewithlovebyreclas-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWRld2l0aGxvdmVieXJlY2xhcyIsImlhdCI6MTUxNjIzOTAyMn0.SZ_8-5ABbYj0-Q-IpLGn-YEnwBdcbF_BcZN10BE4ATo',
 
 ];
